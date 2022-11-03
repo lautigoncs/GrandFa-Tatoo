@@ -1,0 +1,25 @@
+/* Font - HandWritten */
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+@import "scss/header.scss";
+@import "scss/headerMenu.scss";
+@import "scss/mainHome.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.textClickAnim {
+    transition: transform 150ms;
+    &:hover {
+        transform: scale(105%);
+    }
+    &:active {
+        transform: scale(95%);
+    }
+}
