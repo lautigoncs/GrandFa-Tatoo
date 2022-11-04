@@ -16,14 +16,14 @@ header .headerLinks {
   align-items: center;
   justify-content: space-around;
   align-content: center;
-  width: 50%;
+  width: 60%;
 }
 header .headerLinks a {
   margin: 0 20px;
   text-decoration: none;
-  font-family: "Kolker Brush", cursive;
+  font-family: "AliensAndCows", cursive;
   color: black;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .menu-icon {
@@ -31,8 +31,8 @@ header .headerLinks a {
 }
 
 .headerLogo {
-  width: 135px;
-  height: 135px;
+  width: 200px;
+  height: 200px;
 }
 
 @media (max-width: 600px) {
@@ -150,8 +150,52 @@ main {
 
 footer {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.679), transparent);
-  height: 150px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+footer img {
+  height: 250px;
+  margin: 24px;
+}
+
+.footerFirstText {
+  margin: 0;
+  color: black;
+}
+.footerFirstText:first-of-type {
+  font-family: "Moraline", cursive;
+  font-size: 4rem;
+}
+.footerFirstText:last-of-type {
+  font-family: "AliensAndCows", cursive;
+  font-size: 3rem;
+  letter-spacing: 6.5px;
+  position: relative;
+  bottom: 39px;
+}
+
+.footerSocials {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 49px;
+}
+.footerSocials .social {
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.footerSocials .social p {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 2rem;
+}
+.footerSocials .social svg {
+  width: 35px;
+  height: 35px;
 }
 
 * {
@@ -195,6 +239,15 @@ body {
   background-color: #303030;
   border-radius: 10px;
   border: 3px solid #000000;
+}
+
+@font-face {
+  font-family: "Moraline";
+  src: url("../assets/Moraline Script.otf");
+}
+@font-face {
+  font-family: "AliensAndCows";
+  src: url("../assets/aliens and cows_trial.ttf");
 }
 
 /*# sourceMappingURL=styles.css.map */
