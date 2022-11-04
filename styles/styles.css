@@ -1,10 +1,9 @@
 /* Font - HandWritten */
 @import url("https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap");
 header {
-  background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.657));
-  height: 200px;
+  background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.479));
+  height: 150px;
   width: 100%;
-  max-width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -17,7 +16,7 @@ header .headerLinks {
   align-items: center;
   justify-content: space-around;
   align-content: center;
-  width: 70%;
+  width: 50%;
 }
 header .headerLinks a {
   margin: 0 20px;
@@ -37,7 +36,7 @@ header .headerLinks a {
 }
 
 @media (max-width: 600px) {
-  header .headerLinks {
+  header .headerLinks a {
     display: none;
   }
   .menu-icon {
@@ -117,9 +116,42 @@ header .headerLinks a {
 
 main {
   min-height: 100vh;
-  background-image: url(https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/tan-antique-vintage-paper-texture-2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-top: 150px;
+}
+
+.rippedPhoto {
+  margin-top: 5vw;
+  width: 100%;
+  height: 40vw;
+}
+
+.rippedPaper {
+  width: 99.4vw;
+  position: relative;
+  z-index: 10;
+}
+
+.rippedPaperContainer {
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+}
+
+@media (max-width: 1030px) {
+  .rippedPaper {
+    width: 100%;
+  }
+}
+.spaceCarousel {
+  height: 850px;
+}
+
+footer {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.679), transparent);
+  height: 150px;
+  width: 100%;
 }
 
 * {
@@ -128,8 +160,9 @@ main {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  background-image: url(https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/tan-antique-vintage-paper-texture-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .textClickAnim {
@@ -140,6 +173,28 @@ body {
 }
 .textClickAnim:active {
   transform: scale(95%);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #303030 #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  border-radius: 10px;
+  border: 3px solid #000000;
 }
 
 /*# sourceMappingURL=styles.css.map */
