@@ -275,7 +275,7 @@ footer div {
 }
 
 body {
-  background-image: url(https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/tan-antique-vintage-paper-texture-2.jpg);
+  background-image: url("../assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -318,7 +318,7 @@ body {
 }
 @font-face {
   font-family: "AliensAndCows";
-  src: url("../assets/aliens and cows_trial.ttf");
+  src: url("../assets/aliens and cows.ttf");
 }
 
 /*# sourceMappingURL=styles.css.map */
