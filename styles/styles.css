@@ -1,5 +1,5 @@
 /* Font - HandWritten */
-@import url("https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap");
 header {
   background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.479));
   height: 150px;
@@ -16,7 +16,7 @@ header .headerLinks {
   align-items: center;
   justify-content: space-around;
   align-content: center;
-  width: 60%;
+  width: 75%;
 }
 header .headerLinks a {
   margin: 0 20px;
@@ -26,128 +26,135 @@ header .headerLinks a {
   font-size: 3rem;
 }
 
-.menu-icon {
-  display: none;
-}
-
 .headerLogo {
   width: 200px;
   height: 200px;
 }
 
-@media (max-width: 600px) {
-  header .headerLinks a {
+.headerLinksResponsive {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 40px;
+}
+.headerLinksResponsive a {
+  margin: 0 20px;
+  text-decoration: none;
+  font-family: "AliensAndCows", cursive;
+  color: black;
+  font-size: 2rem;
+}
+.headerLinksResponsive .headerLogo {
+  height: 110px;
+}
+
+@media (max-width: 950px) {
+  header .headerLinks {
     display: none;
   }
+  .headerLinksResponsive {
+    display: flex;
+  }
+  .rippedCarousel {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 560px) {
+  .headerLinksResponsive,
+.headerText {
+    display: none;
+  }
+  .headerLogo {
+    height: 100px;
+  }
+  .headerLinks {
+    display: flex !important;
+    width: 100% !important;
+  }
   .menu-icon {
-    display: block;
+    display: inline-block !important;
+  }
+  .rippedCarousel {
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    height: 100px;
+  }
+  .headerLogo {
+    height: 60px;
+    width: auto;
   }
 }
 .menu-icon {
-  z-index: 101;
-  width: 50px;
-  height: 50px;
+  display: none;
   cursor: pointer;
-  margin: 10px;
-  border-radius: 15px;
-  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
-}
-.menu-icon .menu-icon__cheeckbox {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  z-index: 2;
-  -webkit-touch-callout: none;
-  position: absolute;
-  opacity: 0;
-}
-.menu-icon div {
-  margin: auto;
-  position: absolute;
-  width: 22px;
-  height: 12px;
-}
-.menu-icon span {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  border-radius: 1px;
-  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
-}
-.menu-icon span:first-of-type {
-  top: 0;
-}
-.menu-icon span:last-of-type {
-  bottom: 0;
-}
-.menu-icon.active span:first-of-type,
-.menu-icon .menu-icon__cheeckbox:checked + div span:first-of-type {
-  transform: rotate(45deg);
-  top: 5px;
-}
-.menu-icon.active span:last-of-type,
-.menu-icon .menu-icon__cheeckbox:checked + div span:last-of-type {
-  transform: rotate(-45deg);
-  bottom: 5px;
-}
-.menu-icon.active:hover span:first-of-type, .menu-icon.active:hover span:last-of-type, .menu-icon:hover .menu-icon__cheeckbox:checked + div span:first-of-type, .menu-icon:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
-  width: 22px;
-}
-@media (min-width: 1024px) {
-  .menu-icon:hover span:first-of-type {
-    width: 26px;
-  }
-  .menu-icon:hover span:last-of-type {
-    width: 12px;
-  }
 }
 
-@media (max-width: 750px) {
-  .menu-icon {
-    margin: 2% !important;
-  }
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+  margin: 6px 0;
+  transition: 0.4s;
 }
-.menuBackground {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.203);
-  background-color: rgba(0, 0, 0, 0.24);
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
 }
 
 main {
   min-height: 100vh;
-  padding-top: 150px;
+  padding-top: 180px;
 }
 
 .rippedPhoto {
-  margin-top: 5vw;
   width: 100%;
-  height: 40vw;
+  z-index: -20;
 }
 
-.rippedPaper {
-  width: 99.4vw;
+.carouselpaper {
   position: relative;
-  z-index: 10;
+  width: 100%;
+  margin: 5% 0;
 }
 
-.rippedPaperContainer {
-  height: 50vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.rippedPaperTop, .rippedPaperBottom {
   position: absolute;
+  width: 100%;
 }
 
-@media (max-width: 1030px) {
-  .rippedPaper {
-    width: 100%;
+.tres {
+  width: 100%;
+}
+
+.rippedPaperTop {
+  top: -17%;
+}
+
+.rippedPaperBottom {
+  bottom: -16%;
+  left: 0;
+}
+
+@media (max-width: 560px) {
+  main {
+    padding-top: 140px;
   }
 }
-.spaceCarousel {
-  height: 850px;
-}
-
 footer {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.679), transparent);
   width: 100%;
@@ -155,10 +162,14 @@ footer {
   justify-content: center;
   align-items: center;
   align-content: center;
+  padding: 0 10%;
 }
 footer img {
   height: 250px;
   margin: 24px;
+}
+footer div {
+  position: relative;
 }
 
 .footerFirstText {
@@ -187,17 +198,77 @@ footer img {
   color: black;
   display: flex;
   align-items: center;
-}
-.footerSocials .social p {
+  text-decoration: none;
   margin: 0;
   margin-left: 5px;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "AliensAndCows", cursive;
 }
 .footerSocials .social svg {
   width: 35px;
   height: 35px;
 }
 
+@media (max-width: 720px) {
+  .footerFirstText:first-of-type {
+    font-size: 3rem;
+  }
+  .footerFirstText:last-of-type {
+    font-size: 2rem;
+    bottom: 32px;
+  }
+  .footerSocials {
+    position: absolute;
+    bottom: 0px;
+  }
+  footer img {
+    height: 155px;
+  }
+  .social {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 541px) {
+  .footerFirstText:first-of-type {
+    font-size: 2rem;
+  }
+  .footerFirstText:last-of-type {
+    font-size: 1.5rem;
+    bottom: 22px;
+    letter-spacing: 3px;
+  }
+  footer {
+    padding: 0;
+  }
+  footer img {
+    height: 120px;
+  }
+  .social {
+    font-size: 1.5rem !important;
+  }
+  .social svg {
+    width: 20px !important;
+  }
+}
+@media (max-width: 320px) {
+  .footerFirstText:first-of-type {
+    font-size: 1.7rem;
+  }
+  .footerFirstText:last-of-type {
+    font-size: 1.2rem;
+    bottom: 18px;
+  }
+  .footerSocials {
+    bottom: -6px;
+  }
+  footer img {
+    height: 85px;
+    margin: 10px;
+  }
+  .social {
+    font-size: 1.2rem !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;

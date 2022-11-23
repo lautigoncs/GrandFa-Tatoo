@@ -1,5 +1,5 @@
 /* Font - HandWritten */
-@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
 @import "scss/header.scss";
 @import "scss/headerMenu.scss";
 @import "scss/mainHome.scss";
@@ -21,11 +21,9 @@ body {
 
 .textClickAnim {
     transition: transform 150ms;
-
     &:hover {
         transform: scale(105%);
     }
-
     &:active {
         transform: scale(95%);
     }
