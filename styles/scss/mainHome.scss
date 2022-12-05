@@ -39,3 +39,9 @@ main {
         padding-top: 140px;
     }
 }
+
+@media (max-width:320px) {
+    main {
+        padding-top: 90px;
+    }
+}

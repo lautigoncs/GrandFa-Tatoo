@@ -1,6 +1,7 @@
 .menu-icon {
     display: none;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .bar1,
@@ -63,116 +64,5 @@
         &:last-child {
             margin-bottom: 0;
         }
-    }
-}
-
-@media (max-height: 600px) {
-    #menuItems {
-        flex-direction: row;
-        width: 100%;
-        a {
-            margin-bottom: 0 !important;
-            margin-right: 4vw !important;
-            font-size: 3vw !important;
-            &:last-of-type {
-                margin-right: 0 !important;
-            }
-        }
-    }
-}
-
-@media (max-width: 750px) {
-    #menuItems {
-        width: 50%;
-    }
-    @for $i from 1 to 6 {
-        #menuItemOption#{$i} {
-        font-size: 4.5vw !important;
-        margin-bottom: 5vh !important;
-        }
-    }
-}
-
-@media (max-width: 450px) {
-    @for $i from 1 to 6 {
-        #menuItemOption#{$i} {
-        font-size: 11vw !important;
-        margin-bottom: 4vh !important;
-        }
-    }
-}
-
-/*animation start*/
-@for $i from 1 to 6 {
-    #menuItemOption#{$i} {
-        animation-name: menuItemStart;
-        animation-duration: $i * 0.2s + 1s;
-        font-family: 'Work Sans', sans-serif;
-        transition: transform .3s, text-shadow .3s;
-        &:hover {
-            transform: scale(110%);
-            text-shadow: 0px 5px 10px rgba(39, 39, 39, 0.604);
-            cursor: pointer;
-            @media (max-width: 1024px) {
-                transform: scale(100%)
-            }
-        }
-        &:active {
-            transform: scale(98%);
-        }
-    }
-}
-
-@keyframes menuItemStart {
-    0% {
-        transform: translateY(150px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 100;
-    }
-}
-
-@keyframes backgroundStart {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-/*animation end*/
-.menuBackgroundEnd {
-    animation-name: menuBackgroundEnd !important;
-    animation-duration: .5s !important;
-}
-
-.menuItemOptionEnd {
-    animation-name: menuItemOptionEnd !important;
-    animation-duration: .4s !important;
-    animation-timing-function: ease-in;
-    animation-fill-mode: both;
-}
-
-
-@keyframes menuBackgroundEnd {
-    100% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes menuItemOptionEnd {
-    0% {
-        transform: translateY(0);
-        opacity: 100;
-    }
-    100% {
-        transform: translateY(50px);
-        opacity: 0;
     }
 }
